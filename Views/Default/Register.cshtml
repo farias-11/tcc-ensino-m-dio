@@ -1,0 +1,96 @@
+﻿@model TCC2019.Models.Register
+@{
+    ViewBag.Title = "Register";
+}
+<link href="~/CSS/Register.css" rel="stylesheet" />
+@using (Html.BeginForm("Register", "Default", FormMethod.Post))
+{
+    <fieldset >
+        <table align="center">
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Usuário")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.Usuario)</td>
+                <td>@Html.ValidationMessageFor(a => a.Usuario, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite sua Senha")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.PasswordFor(a => a.Senha)</td>
+                <td>@Html.ValidationMessageFor(a => a.Senha, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Confirme sua Senha")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.PasswordFor(a => a.ConfirmarSenha)</td>
+                <td>@Html.ValidationMessageFor(a => a.ConfirmarSenha, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Nome")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.Nome)</td>
+                <td>@Html.ValidationMessageFor(a => a.Nome, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Sobrenome")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.Sobrenome)</td>
+                <td>@Html.ValidationMessageFor(a => a.Sobrenome, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Email")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.Email)</td>
+                <td>@Html.ValidationMessageFor(a => a.Email, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Número")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.NumCel)</td>
+                <td>@Html.ValidationMessageFor(a => a.NumCel, null, new { style = "color:red" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="submitbtn" value="Registrar" align="center"/>
+                </td>
+            </tr>
+        </table>
+        <a href="~/Default/Login">Logar-se</a>
+    </fieldset>
+
+}

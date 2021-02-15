@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link href="~/CSS/Home.css" rel="stylesheet" />
+</head>
+<body>
+    
+    
+    <div class="imgFundo"><img src="~/img/fundinho.png" height="600" width="1407" />
+    <div class="titulo"> Studio Wonderful</div>
+    </div>
+
+    <div class="rodapéhome">
+
+        <div class=" logolocal"><img src="~/img/logo localizacao.png" width="30" height="30" /></div>
+        <div class=" logotelefone"><img src="~/img/logo telefone.png" width="30" height="30"/></div>
+        <div class=" logowhats"><img src="~/img/logo whats preto.png" width="33" height="33" /></div>
+        <div class=" logoinsta"><img src="~/img/logo insta preto.png"width="46" height="46" /></div>
+        <div class=" logoface"><img src="~/img/logo face preto.png" width="40" height="40" /></div>
+        <div class="nomeinta"> StudioWonderful  </div>
+        <div class="numwhats"> (11) 99415-2606 </div>
+        <div class="facenome"> Wonderful Cabeleireiros</div>
+        <div class="numtel">(11) 5820-5568</div>
+        <div class="localizaçao">R. Líra Cearense, 348 - Jd Evana, São Paulo - SP, 05763-450 </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li><a href="/Default/Home">Home</a></li>
+            <li><a href="/Default/About">About</a></li>
+            <li><a href="/Default/Services">Services</a></li>
+            <li><a href="/Default/Contact">Contact</a></li>
+            <li><a href="/Default/Login">Login</a></li>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="/Default/Home">Home</a>
+        <a href="/Default/About">About</a>
+        <a href="/Default/Services">Services</a>
+        <a href="/Default/Contact">Contact</a>
+        <a href="/Default/Login">Login</a>
+    </div>
+
+    <div id="main">
+
+    </div>
+
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+    </script>
+
+</body>
+</html>
+
+

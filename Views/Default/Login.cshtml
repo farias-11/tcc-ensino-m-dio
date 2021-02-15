@@ -1,0 +1,37 @@
+﻿@model TCC2019.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+<link href="~/CSS/Login.css" rel="stylesheet" />
+@using (Html.BeginForm("Login", "default", FormMethod.Post))
+{
+<fieldset >
+        <table align="center">
+            <tr>
+                <td>
+                    @Html.Label("Digite seu Usuário")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.TextBoxFor(a => a.Usuario)</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Digite sua Senha")
+                </td>
+            </tr>
+            <tr>
+
+                <td>@Html.PasswordFor(a => a.Senha)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="submitbtn" value="Logar" />
+                </td>
+            </tr>
+        </table>
+<a href="~/Default/Register" >Registrar-se</a>
+</fieldset>
+}
